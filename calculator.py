@@ -1,11 +1,19 @@
 #!/usr/bin/env python3
 
+# this is the calculator module
 def calculate(a, b, op):
-    try:
-        a = float(a)
-        b = float(b)
-    except ValueError:
-        return "Error: Please enter valid numbers."
+    a = input("Please enter your input for input a: ")
+    while (a != float or int):
+        try:
+            (a == float or int)
+        except ValueError:
+            return "Error: Please enter valid numbers for input a."
+
+        b = input("Please enter your input for input b: ")
+        try:
+            (b == float or int)
+        except ValueError:
+            return "Error: Please enter valid numbers for input b."
 
     match op:
         case '+':
@@ -21,6 +29,7 @@ def calculate(a, b, op):
         case _:
             return "Error: Unsupported operation."
 
+# simple driver program to test the calculator
 def main():
     print("CLI Calculator")
     print("Enter your operation (e.g. 3.5 * 4):")
@@ -34,5 +43,6 @@ def main():
     except ValueError:
         print("Error: Please enter in format 'number operator number'.")
 
+# i dont even know what this does
 if __name__ == "__main__":
     main()
